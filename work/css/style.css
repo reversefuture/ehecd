@@ -1,0 +1,271 @@
+// common
+input[type=checkbox] {
+	visibility: hidden;
+}
+ .red{
+	color:#FD7F6B;
+}
+
+.nav{
+	background: #FC4B2E;
+	height: 1.375rem;
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.375rem;
+	position:fixed;
+	left:0;
+	top:0;
+	width: 100%;
+}
+
+.nav a {
+	display: block;
+	width:1.375rem;
+	height: 1.375rem;
+	line-height: 1.375rem;
+	color:#fff;
+	font-size:24px;
+}
+
+.nav a:nth-child(1){
+	float: left;
+	margin-left: 0.28rem;
+
+}
+
+.nav a:nth-child(2){
+	float: right;
+	margin-right: 0.28rem;
+}
+
+.nav .title{
+	display: block;
+	margin:0 1.375rem;
+	text-align: center;
+	line-height: 1.375rem;
+	font-size: 18px;
+}
+
+.iFlex{
+	display: flex;
+	flex-direction: row;
+    flex-basis: 100%;
+  	font-size: 12px;
+	border-bottom: 0.04rem solid #F2F2F2;
+	color:#2E2E2E;
+	padding-left: 0.28rem;
+	padding-right: 0.28rem;
+}
+
+
+.type {
+	// margin-top: 1.375rem;
+	height: 1.375rem;
+	line-height: 1.375rem;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+
+ .type span:first-child{
+	width:2.25rem;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+
+.distance {
+	height: 1.375rem;
+	line-height: 1.375rem;
+
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	border-bottom: 0.3125rem solid #F2F2F2;
+}
+
+.distance span:first-child{
+	width: 2.25rem;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+
+.maintain {
+	position: relative;
+	height:2rem;
+	display: block;
+	border-bottom: 0.04rem solid #F2F2F2;
+}
+
+.maintain div:first-child{
+	height: 1rem;
+	line-height: 1rem;
+	padding-left:1rem;
+	font-size: 16px;
+	color:#2E2E2E;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+
+.maintain div:first-child i{
+	position: absolute;
+	background-image: url(../img/slice/car.png);
+	background-repeat: no-repeat;
+	width: 0.6rem;
+    height: 0.6rem;
+	left: 0.2rem;
+	top: 0.2rem;
+}
+
+.maintain div:nth-of-type(2){
+	height: 22px;
+	color:#CCCCCC;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	padding-left: 1rem;
+}
+
+.mustChange {
+	height:2rem;
+	display: block;
+	border-bottom: 0.04rem solid #F2F2F2;
+}
+
+.mustChange .iFlex {
+	padding-left: 0.28rem;
+	border-bottom: none;
+}
+
+.mustChange .iFlex span{
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+}
+
+.mustChange .iFlex span:first-child{
+	width: 2.25rem;
+}
+
+.mustChange div:nth-child(2){
+	position: relative;
+	height: 0.75rem;
+	padding-left: 3.1875rem;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	color:#CCCCCC;
+	font-size:12px;
+}
+
+.mustChange div:nth-child(2) label{
+	position: absolute;
+	background-image: url(../img/slice/checked.png);
+	background-repeat: no-repeat;
+	width: 0.57rem;
+    height: 0.57rem;
+	left: 2.5rem;
+	top:0;
+	
+}
+
+.mustChange input[type=checkbox]:checked + div:nth-child(2) label{
+	position: absolute;
+	background-image: url(../img/slice/notChecked.png);
+	background-repeat: no-repeat;
+	width: 0.57rem;
+    height: 0.57rem;
+	left: 2.5rem;
+	top:0;
+}
+
+.mustChange input[type=checkbox]:checked + label {
+	background-image: url(../img/slice/notChecked.png);
+}
+
+.suggest {
+	font-size: 16px;
+	height: 1.375rem;
+	line-height: 1.375rem;
+}
+
+.suggestItems {
+	padding-left: 0;
+}
+
+.suggestItems > span{
+	display: inline-block;
+	
+}
+
+.suggestItems .left{
+	border-right:0.04rem solid #F2F2F2;
+}
+
+.suggestItems .line1{
+	height: 2.063rem;
+	line-height: 2.063rem;
+	border-bottom: 0.04rem solid #F2F2F2;
+} 
+
+.suggestItems .line2{
+	height: 2.625rem;
+	line-height: 2.625rem;
+	border-bottom: 0.04rem solid #F2F2F2;
+} 
+
+.suggestItems .line2 > div{
+	height: 50%;
+	line-height:1.3125rem;
+} 
+
+.suggestItems .line1> div , .line2 > div{
+	text-indent: 0.5625rem;
+	position: relative;
+}
+
+.suggestItems .line1> div > label, .line2 > div > label{
+	position: absolute;
+	display: inline-block;
+	background-image: url(../img/slice/checked.png);
+	background-repeat: no-repeat;
+	width: 0.57rem;
+    height: 0.57rem;
+	left:0.28rem;
+	top:0.75rem;
+}
+
+.suggestItems .line2 > div label{
+	top:0.375rem;
+}
+
+.suggestItems input[type=checkbox]:checked + label {
+	background-image: url(../img/slice/notChecked.png);
+}
+
+.foot{
+	height: 2rem;
+	
+}
+
+.foot > div {
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 16px;
+}
+
+.foot > div .title{
+	margin-left: 5.4375rem;
+}
+
+
+/*
+
+white-space: nowrap;
+overflow:hidden;
+text-overflow:ellipsis;  
+
+*/
