@@ -160,11 +160,17 @@ label input[type="checkbox"], label input[type="radio"] {
     height: 0.75rem;
     line-height: 0.75rem;
     text-indent: 3.1rem;
+    color:#ccc;
 }
 
 .mustChange  label.iChange > input:checked + span:before {
     background-image: url(../img/slice/checked.png);
 }
+
+.mustChange  label.iChange > input:checked + span{
+    color:#2E2E2E;
+}
+
  .mustChange  label.iChange > span:before {
     background-image: url(../img/slice/notChecked.png);
 }
@@ -253,12 +259,15 @@ label input[type="checkbox"], label input[type="radio"] {
 .items .box label span {
     display: inline-block;
     text-indent: 0.8425rem;
-    color:#2E2E2E;
+    color:#ccc;
     font-size: 12px;
 }
 
 label.icheck input:checked + span:before {
     background-image: url(../img/slice/checked.png);
+}
+label.icheck input:checked + span {
+     color:#2E2E2E;
 }
 label.icheck span:before {
     background-image: url(../img/slice/notChecked.png);
