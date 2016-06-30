@@ -1,6 +1,6 @@
 // common
-input[type=checkbox] {
-	display: none;
+label input[type="checkbox"], label input[type="radio"] {
+    display: none;
 }
  .red{
 	color:#FD7F6B;
@@ -52,11 +52,14 @@ input[type=checkbox] {
 }
 
 .iFlex{
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-    flex-basis: 100%;
-  	font-size: 12px;
-	border-bottom: 0.04rem solid #F2F2F2;
+	-ms-flex-direction: row;
+	    flex-direction: row;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  	font-size: 14px;
+	border-bottom: 0.03rem solid #F2F2F2;
 	color:#2E2E2E;
 	padding-left: 0.28rem;
 	padding-right: 0.28rem;
@@ -100,14 +103,13 @@ input[type=checkbox] {
 	position: relative;
 	height:2rem;
 	display: block;
-	border-bottom: 0.04rem solid #F2F2F2;
+	border-bottom: 0.03rem solid #F2F2F2;
 }
 
 .maintain div:first-child{
 	height: 1rem;
 	line-height: 1rem;
 	padding-left:1rem;
-	font-size: 16px;
 	color:#2E2E2E;
 	white-space: nowrap;
 	overflow:hidden;
@@ -137,25 +139,30 @@ input[type=checkbox] {
 .mustChange {
 	height:2rem;
 	display: block;
-	border-bottom: 0.04rem solid #F2F2F2;
+	border-bottom: 0.03rem solid #F2F2F2;
 }
 
 .mustChange .iFlex {
-	padding-left: 0.28rem;
-	border-bottom: none;
+    padding-left: 0.28rem;
+    border-bottom: none;
+    line-height: 1.25rem;
+    height: 1.25rem;
+    white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
 }
 
 .mustChange .iFlex span{
-	white-space: nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis; 
+	
 }
 
 .mustChange .iFlex span:first-child{
 	width: 2.25rem;
 }
 
-.mustChange div:nth-child(2){
+.mustChange label.iChange{
+	display: block;
+	background-image: url(../img/slice/checked.png);
 	position: relative;
 	height: 0.75rem;
 	padding-left: 3.1875rem;
@@ -164,55 +171,11 @@ input[type=checkbox] {
 	text-overflow:ellipsis; 
 	color:#CCCCCC;
 	font-size:12px;
-}
-
-.mustChange div:nth-child(2) label{
-	position: absolute;
-	background-image: url(../img/slice/checked.png);
-	background-repeat: no-repeat;
-	width: 0.57rem;
-    height: 0.57rem;
-	left: 2.5rem;
-	top:0;
-	
+	cursor: pointer;
 }
 
 .mustChange input[type=checkbox]:checked + div:nth-child(2) label{
-	position: absolute;
 	background-image: url(../img/slice/notChecked.png);
-	background-repeat: no-repeat;
-	width: 0.57rem;
-    height: 0.57rem;
-	left: 2.5rem;
-	top:0;
-}
-
-.mustChange input[type=checkbox]:checked + label {
-	background-image: url(../img/slice/notChecked.png);
-}
-
-.suggest {
-	font-size: 16px;
-	height: 1.375rem;
-	line-height: 1.375rem;
-}
-
-.items {
-	-webkit-display:flex;
-	display: flex;
-	// flex-direction: row;
-	// flex-wrap:wrap;
-	flex-flow: row wrap;
-    flex-basis: 100%;
-
-}
-
-.items .box{
-	width:49%;
-	height: 2.62rem;
-	border-bottom: 0.04rem solid #F2F2F2;
-	border-right:0.04rem solid #F2F2F2;
-	display: table;
 }
 
 .items .box label{
@@ -220,10 +183,10 @@ input[type=checkbox] {
 	display: block;
     position: relative;
     line-height: 1.31rem;
-
     white-space: nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis; 
+	cursor:pointer;
 }
 
 .items .box label.line1{
@@ -257,10 +220,77 @@ label.icheck span:before, label.iradio span:before {
     -webkit-background-size: cover;
 }
 
+// mustchange
+.suggest {
+	font-size: 14px;
+	height: 1.375rem;
+	line-height: 1.375rem;
+}
 
+.items {
+	-webkit-display:flex;
+	display: -ms-flexbox;
+	display: flex;
+	// flex-direction: row;
+	// flex-wrap:wrap;
+	-ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
 
+}
 
+.items .box{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width:50%;
+	height: 2.62rem;
+	border-bottom: 0.03rem solid #F2F2F2;
+	border-right:0.03rem solid #F2F2F2;
+	display: table;
+}
 
+.items .box label{
+	height: 1.31rem;
+	display: block;
+    position: relative;
+    line-height: 1.31rem;
+    white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	cursor:pointer;
+}
+
+.items .box label.line1{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.items .box label span {
+    display: inline-block;
+    text-indent: 0.8425rem;
+    color:#2E2E2E;
+    font-size: 12px;
+}
+
+label.icheck input:checked + span:before {
+    background-image: url(../img/slice/checked.png);
+}
+label.icheck span:before {
+    background-image: url(../img/slice/notChecked.png);
+}
+label.icheck span:before, label.iradio span:before {
+    display: block;
+    content: '';
+    width: 0.5625rem;
+    height: 0.5625rem;
+    position: absolute;
+    left: 0.28rem;
+    top: 50%;
+    margin-top: -.28rem;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
 
 .foot{
 	height: 2rem;
@@ -271,8 +301,6 @@ label.icheck span:before, label.iradio span:before {
 	height: 1rem;
 	line-height: 1rem;
 	font-size: 16px;
-}
-
-.foot > div .title{
-	margin-left: 5.4375rem;
+	margin-left: 50%;
+	text-indent: 0.28rem;
 }
