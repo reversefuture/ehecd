@@ -18,9 +18,9 @@
 </head>
 <body>
 	<div class="nav">
-			<a href="link pull-left link-left">
+			<a href="javascript:void(0)" class="link pull-left">
 				<i class=" fa fa-angle-left"></i></a>
-			<a href="link pull-right link-right">
+			<a href="javascript:void(0)" class="link pull-right">
 				<i class=" fa fa-angle-right"></i></a>
 			<span class="title">保养详情</span>
 	</div>
@@ -34,7 +34,11 @@
 		<div class="mustChange">
 			<div class="iFlex"><span >必须更换</span><span class="mustChangeVal">机油、机油格</span>
 			</div>
-			<div><input type="checkbox" id="mustChangeCheckbox"><label for="mustChangeCheckbox"></label >使用橙币抵扣<span class="red">30%</span>
+			<div>
+				<label for="mustChangeCheckbox" class="iChange">
+					<input type="checkbox" id="mustChangeCheckbox">
+					<span>使用橙币抵扣</span><span class="red">30%</span>
+				</label >
 			</div>
 		</div>
 		<div class="suggest iFlex">建议更换</div>

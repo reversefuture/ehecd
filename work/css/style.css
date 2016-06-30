@@ -162,7 +162,7 @@ label input[type="checkbox"], label input[type="radio"] {
 
 .mustChange label.iChange{
 	display: block;
-	background-image: url(../img/slice/checked.png);
+	background: url(../img/slice/checked.png) no-repeat;
 	position: relative;
 	height: 0.75rem;
 	padding-left: 3.1875rem;
