@@ -1,0 +1,226 @@
+*{
+	list-style:none;
+	margin:0;
+	padding :0;
+	color:#fee8e5;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+/**section**/
+body{
+	background:url(../img/bg.jpg) no-repeat center center;
+	background-size:cover;
+	background-position:top left;
+}
+.wrap{
+	width:1000px;
+	margin:0 auto;
+	padding-top:100px;
+	padding-left:200px;
+}
+.sec_left{
+	width:400px;
+	float: left;
+}
+.sec_left li{
+	width:288px;
+	height:40px;
+	border: 1px solid #ffb195;
+	margin-bottom:10px;
+}
+.sec_left li input{
+	display: inline-block;
+	float:right;
+	width:200px;
+	height:40px;
+	outline: none;
+	border:0px;
+	color:#fec1ab;
+}
+.sec_left .test{
+	border:0px solid;
+	padding-left: 0px;
+	width:300px;
+}
+.sec_left .test input{
+	width:100px;
+	clear: both;
+}
+.sec_left .test p{
+	float:left;
+	width:180px;
+	border:1px solid #ffb195;
+	height:40;
+	padding-left: 10px;
+}
+.sec_left .test b{
+	display:block;
+	float: right;
+	width:96px;
+	height:38px;
+	border:2px solid #ffb195;
+	text-align: center;
+	cursor: pointer;
+}
+.sec_left li{
+	line-height: 40px;
+	padding-left: 10px;
+}
+.sec_left .ip{
+	width:300px;
+	height:140px;
+	border:0px solid ;
+	padding-left: 0px;
+}
+.sec_left .ip>div{
+	float:left;
+	line-height: 20px;
+	text-align: center;
+}
+#uploa>div{
+	width:80px;
+	height:80px;
+	background:url(../img/ip.jpg) no-repeat right;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+#uploa{
+	margin-right: 30px;
+	position: relative;
+}
+#uploa:hover>b{
+	display: block;
+}
+#uploa>b{
+	display: none;
+	width:33px;
+	height:19px;
+	padding-left:24px;
+	padding-right: 23px;
+	padding-bottom: 30px;
+	padding-top: 31px;
+	background-color: #000;
+	opacity: .7;
+	position: absolute;
+	left: 0px;
+	top:0px;
+}
+#uploa>b>span{
+	display: block;
+	width:33px;
+	height:19px;
+	background:url(../img/eyex.png) no-repeat;
+	cursor: pointer;
+}
+#shop>div{
+	width:80px;
+	height:80px;
+	background:url(../img/ip.jpg) no-repeat -82px 0px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+#shop{
+	margin-right: 30px;
+	position: relative;
+}
+#shop:hover>b{
+	display: block;
+}
+#shop>b{
+	display: none;
+	background-color: #000;
+	opacity: .7;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+#shop>b>span{
+	display: block;
+	width:80px;
+	height:80px;
+	background:url(../img/eyei.png) no-repeat center;
+	cursor: pointer;
+}
+#user{
+	position: relative;
+}
+#user>input{
+	position: absolute;
+	width:80px;
+	height:80px;
+	top:0px;
+	left:0px;
+	opacity: 0;
+}
+#user>div{
+	width:28px;
+	height:28px;
+	padding:25px;
+	border: 1px solid #ffb195;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+#user>div>span{
+	display: block;
+	width:27px;
+	height:27px;
+	background: url(../img/eyei.png) no-repeat -53px -37px;
+}
+.sec_left .login{
+	border:0px solid;
+	border-radius: 30px;
+	background-color: #ffa800;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;	
+	color:#fff;
+	text-align: center;
+	cursor: pointer;
+}
+.line{
+	display: block;
+	float: left;
+	width:1px;
+	height:500px;
+	background-color: #ffb195;
+	margin-right: 99px;
+	margin-right: 99px;
+}
+.sec_right{
+	width:400px;
+	height:500px;
+	padding-right:100px;
+	float: right;
+}
+.sec_right img{
+	width:400px;
+	height:400px;
+}
+/**修改placeholder里面的颜色**/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ffb195;
+    font-size: 12px;
+}
+/**蒙版大图片**/
+.masking{
+	display: none;
+	position: fixed;
+	left:10%;
+	width:80%;
+	height:600px;
+	padding-top: 200px;
+	text-align: center;
+	background-color: rgba(0,0,0,.5);
+}
+.masking img{
+	width:700px;
+	height:400px;
+}
+.masking span{
+	position: absolute;
+	right:5px;
+	top:0;
+	font-size: 20px;
+	cursor: pointer;
+}

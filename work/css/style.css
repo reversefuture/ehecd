@@ -1,9 +1,9 @@
 // common
-label input[type="checkbox"], label input[type="radio"] {
-    display: none;
-}
  .red{
 	color:#FD7F6B;
+}
+label input[type="checkbox"], label input[type="radio"] {
+    display: none !important;
 }
 
 .nav{
@@ -106,7 +106,7 @@ label input[type="checkbox"], label input[type="radio"] {
 	border-bottom: 0.03rem solid #F2F2F2;
 }
 
-.maintain div:first-child{
+.maintain h4{
 	height: 1rem;
 	line-height: 1rem;
 	padding-left:1rem;
@@ -116,7 +116,7 @@ label input[type="checkbox"], label input[type="radio"] {
 	text-overflow:ellipsis; 
 }
 
-.maintain div:first-child i{
+.maintain h4 i{
 	position: absolute;
 	background-image: url(../img/slice/car.png);
 	background-repeat: no-repeat;
@@ -126,7 +126,7 @@ label input[type="checkbox"], label input[type="radio"] {
 	top: 0.2rem;
 }
 
-.maintain div:nth-of-type(2){
+.maintain p{
 	height: 22px;
 	color:#CCCCCC;
 	font-size: 12px;
@@ -151,31 +151,34 @@ label input[type="checkbox"], label input[type="radio"] {
 	overflow:hidden;
 	text-overflow:ellipsis; 
 }
-
-.mustChange .iFlex span{
-	
-}
-
 .mustChange .iFlex span:first-child{
 	width: 2.25rem;
 }
-
 .mustChange label.iChange{
 	display: block;
-	background-image: url(../img/slice/checked.png);
-	position: relative;
-	height: 0.75rem;
-	padding-left: 3.1875rem;
-	white-space: nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis; 
-	color:#CCCCCC;
-	font-size:12px;
-	cursor: pointer;
+    position: relative;
+    height: 0.75rem;
+    line-height: 0.75rem;
+    text-indent: 3.1rem;
 }
 
-.mustChange input[type=checkbox]:checked + div:nth-child(2) label{
-	background-image: url(../img/slice/notChecked.png);
+.mustChange  label.iChange > input:checked + span:before {
+    background-image: url(../img/slice/checked.png);
+}
+ .mustChange  label.iChange > span:before {
+    background-image: url(../img/slice/notChecked.png);
+}
+.mustChange  label.iChange > span:before, label.iradio > span:before {
+    display: block;
+    content: '';
+    width: .57rem;
+    height: .57rem;
+    position: absolute;
+    left: 2.53rem;
+    top: 50%;
+    margin-top: -.28rem;
+    background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .items .box label{
@@ -201,30 +204,11 @@ label input[type="checkbox"], label input[type="radio"] {
     font-size: 12px;
 }
 
-label.icheck input:checked + span:before {
-    background-image: url(../img/slice/checked.png);
-}
-label.icheck span:before {
-    background-image: url(../img/slice/notChecked.png);
-}
-label.icheck span:before, label.iradio span:before {
-    display: block;
-    content: '';
-    width: 0.5625rem;
-    height: 0.5625rem;
-    position: absolute;
-    left: 0.28rem;
-    top: 50%;
-    margin-top: -.28rem;
-    background-size: cover;
-    -webkit-background-size: cover;
-}
-
-// mustchange
 .suggest {
 	font-size: 14px;
 	height: 1.375rem;
 	line-height: 1.375rem;
+	border-bottom: 0.03rem solid #F2F2F2;
 }
 
 .items {

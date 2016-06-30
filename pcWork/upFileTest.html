@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+function Update()
+{            
+   var im=document.getElementById("img");
+   im.style.display="block";
+   im.src=document.getElementById("file").value;
+  }
+</script>
+<form name="form1">
+<input id="img" type="image" width="500px" height="500px" name="updateArea" style="display:none" />
+<input id="file" type="file" onChange="Update()" name="fileSrc" />
+<input type="button" value="提交"  />
+</form>
+</body>
+</html>

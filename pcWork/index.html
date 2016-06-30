@@ -6,42 +6,93 @@
 	<link rel="stylesheet" type="text/css" href="css/gloabl.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
-	<main class="main">
-		<div class="content">
-			<form action="" class="form">
-				<div class="username">
-					
+	<div class="main">
+			<form action="" class="content clearFix">
+				<div class="username item">
+					<span class="title">申请账号：</span>
+					<input type="number" class="phoneNum" placeholder="请输入真实手机号">
 				</div>
-				<div class="verifyCode">
-					
+				<div class="verifyCode item">
+					<div>
+						<span class="title">验证码：</span>
+						<input type="text" >
+
+					</div>
+					<button type = "submit" class="getVerifyCode">获取验证码</button>
 				</div>
-				<div class="pwd">
-					
+				<div class="pwd item">
+					<span class="title">密码：</span>
+					<input type="password"  placeholder="请输入密码">
 				</div>
-				<div class="confirmPwd">
-					
+				<div class="confirmPwd item">
+					<span class="title">确认密码：</span>
+					<input type="password" placeholder="请确认密码">
 				</div>
-				<div class="storeName">
-					
+				<div class="storeName item">
+					<span class="title">门店名称：</span>
+					<input type="text"  placeholder="">
 				</div>
-				<div class="storeAdress">
-					
+				<div class="storeAdress item">
+					<span class="title">门店地址：</span>
+					<input type="text" placeholder="">
 				</div>
-				<div class="pic">
-					
+				<div class="upload">
+					<div class="box1 box">
+						<!-- <label class="upImg1 upImg" for="upImgInput1">
+							<input type="file" id="upImgInput1"> -->
+							<div class="preview"></div>
+							<div class="upImgMask">
+								<i class="icon1 icon">
+									<!-- <a class = "largeImg' href="img/id_large.jpg" rel="lightbox-tour"></a> -->
+									<a href="http://image.zhangxinxu.com/image/study/s/s512/mm1.jpg" data-lightbox="largeImg1" title="张含韵小美女"></a>
+									<a href="img/id_large.jpg" data-lightbox="largeImg1" title="张含韵小美女"></a>
+									
+								</i>
+							</div>
+						
+						<p class="title"></p>
+						<p class="num">（1张）</p>
+						
+
+					</div>
+					<div class="box2 box">
+
+						<label class="upImg2 upImg" for="upImgInput2">
+							<input type="file" id="upImgInput2">
+							<span class="upImgMask"><i class="icon2 icon"></i>
+							</span>
+						</label>
+						<div class="preview" style="display:none"></div>
+						<p class="title">营业执照</p>
+						<p class="num">（1-3张）</p>
+						
+					</div>
+					<div class="box3 box">
+						<label class="upImg3 upImg" for="upImgInput3">
+							<input type="file" id="upImgInput3">
+							<span class="upImgMask"><i class="icon3 icon"></i>
+							</span>
+						</label>
+						<div class="preview" style="display:none"></div>
+						<p class="title">开户许可证</p>
+						<p class="num">（1-3张）</p>
+					</div>
 				</div>
-				<div class="register">
-					
-				</div>
+				<button class="register" type="submit">
+					<a href="javascript:void(0)"></a>
+				</button>
 			</form>
-		</div>
-		<div class="aside">
+		<div class="brand clearFix">
 			
 		</div>
-	</main>
+	</div>
 	<script src="lib/jquery-2.1.4.min.js"></script>
-	<script src="script/common.js"></script>
+	<script src="lib/lightbox.js"></script>
+	<script src="lib/common.js"></script>
+	<script src="js/index.js"></script>
+
 </body>
 </html>
